@@ -11,8 +11,6 @@ struct BFSNode {
 	Direction direction;
 
 	Puzzle puzzle;
-
-	//bool operator == (BFSNode& a, BFSNode& a)
 };
 
 class BFS {

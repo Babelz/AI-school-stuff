@@ -14,13 +14,14 @@ enum Direction {
 class Puzzle {
 private:
 	std::vector<std::vector<ushort>> board;
+	std::vector<size_t> lockedRows;
 
 	Direction findDirection(const size_t row, const size_t column) const;
 public:
 	// Is index value.
-	const ushort WIDTH = 2;
+	const ushort WIDTH = 3;
 	// Is index value.
-	const ushort HEIGHT = 2;
+	const ushort HEIGHT = 3;
 
 	const ushort EMPTY = 0;
 	
@@ -28,10 +29,20 @@ public:
 
 	void draw() const;
 
+	bool topHalfSolved() const;
+	bool bottomHalfSolved() const;
 	bool solved() const;
 
 	ushort getEmptyTileRow() const;
 	ushort getEmptyTileColumn() const;
+
+	bool firstRowSorted() const;
+	bool secondRowSorted() const;
+	bool thirdRowSorted() const;
+	bool fourthRowSorted() const;
+
+	bool isRowLocked(const size_t row) const;
+	void lockRow(const size_t row);
 
 	bool inRange(const size_t row, const size_t column) const;
 	ushort tileAtIndex(const size_t row, const size_t column) const;
@@ -44,6 +55,7 @@ public:
 
 	Puzzle& operator = (Puzzle& a) {
 		board = a.board;
+		lockedRows = a.lockedRows;
 
 		return *this;
 	}

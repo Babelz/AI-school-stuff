@@ -1,9 +1,11 @@
 c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\vc120.pdb
 c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\vc120.idb
-c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\breadthfirstsearch.obj
+c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\astarpathfinder.obj
+c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\bfs.obj
 c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\decisiontree.obj
 c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\dogmachine.obj
 c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\main.obj
+c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\nim.obj
 c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\puzzle.obj
 c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\ai\debug\statemachine.obj
 c:\users\ttv14snikos\documents\visual studio 2013\projects\ai\debug\ai.ilk

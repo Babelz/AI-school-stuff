@@ -1,10 +1,23 @@
 #include <iostream>
 #include <ctime>
-#include "NIM.h"
-#include "AStarPathfinder.h"
+#include "KnapsackProblem.h"
+
+/*float findMinimizedX(float x) {
+	return std::pow(x, 2.0) + 3.0f * x - 5;
+}
+float derivate(float fa, float fb, float x) {
+	return (fa - fb) / x;
+}
+float lowerDerivate(float fx, float h) {
+	return (findMinimizedX(fx + h) - findMinimizedX(fx) * 2.0f + findMinimizedX(fx - h)) / std::pow(h, 2.0);
+}
+float f(float x) {
+	return (x - 3) * (x + 2)*(x + 3);
+}*/
 
 int main(char** argc, int argv) {
-	std::vector<std::string> map;
+	// AStar stuff.
+	/*std::vector<std::string> map;
 	map.push_back("S..#...#...#####...#......");
 	map.push_back("##.#.#.#.#.##....#.#.####.");
 	map.push_back("##...#...#.##.####...##...");
@@ -88,7 +101,52 @@ int main(char** argc, int argv) {
 
 	for (size_t i = 0; i < map.size(); i++) {
 		std::cout << map[i].c_str() << std::endl;
-	}
+	}*/
+
+	// x = food
+	// y = water
+	// Food: t(x) = x + 15
+	// Water: t(x) = 40 - x / w + 2
+
+	/*for (size_t i = 0; i < 10; i++) {
+		const static float h = std::pow(10.0f, -2.0);
+		const static float g = std::pow(10.0f, -5.0);
+
+		std::cout << "A: " << derivate(findMinimizedX(i + h), findMinimizedX(i), h)  << std::endl;
+		std::cout << "B: " << derivate(findMinimizedX(i + g), findMinimizedX(i), g) << std::endl;
+		std::cout << std::endl;
+	}*/
+
+	/*const static float eps = 0.0001f;
+	float gamma = 1.f;
+	float xn = 0.0f;
+	float h = std::pow(10.0, -2.0);
+	float xn1 = 0.f;
+
+
+	float toinenxn = 0.f;
+	float toinenxn1 = 0.f;
+	
+	float kolmasxn = 0.f;
+	float kolmasxn1 = 0.f;
+
+	do{
+		xn = xn1;
+		xn1 = xn - gamma * derivate(findMinimizedX(xn + h), findMinimizedX(xn), h) / lowerDerivate(xn, h);
+	
+		toinenxn = toinenxn1;
+		toinenxn1 = toinenxn - gamma * ((2.f * toinenxn) + 3) / 2.f;
+
+		std::cout << xn << std::endl;
+		std::cout << "second one " << toinenxn << std::endl;
+
+		kolmasxn = kolmasxn1;
+		kolmasxn1 = kolmasxn - gamma * derivate(f(kolmasxn) + h, f(kolmasxn), h) / lowerDerivate(f(kolmasxn), h);
+		std::cout << "third one " << kolmasxn << std::endl;
+	} while (std::abs(xn1 - xn) > eps);*/
+	
+	KnapsackProblem p;
+	p.solve();
 
 	return 0;
 }

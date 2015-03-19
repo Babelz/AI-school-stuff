@@ -80,6 +80,7 @@
     <ClCompile Include="BFS.cpp" />
     <ClCompile Include="DecisionTree.cpp" />
     <ClCompile Include="DogMachine.cpp" />
+    <ClCompile Include="KnapsackProblem.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NIM.cpp" />
     <ClCompile Include="Puzzle.cpp" />
@@ -90,6 +91,7 @@
     <ClInclude Include="BFS.h" />
     <ClInclude Include="DecisionTree.h" />
     <ClInclude Include="DogMachine.h" />
+    <ClInclude Include="KnapsackProblem.h" />
     <ClInclude Include="NIM.h" />
     <ClInclude Include="Puzzle.h" />
     <ClInclude Include="StateMachine.h" />
